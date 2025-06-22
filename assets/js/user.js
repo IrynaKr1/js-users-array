@@ -37,9 +37,9 @@ console.groupEnd();
 // ---------------------------
 console.group('Список повних імен користувачів');
 
-for (let i = 0; i < users.length; i++) {
-  console.log(users[i].getFullName());
-}
+users.forEach((u) => {
+  console.log(u.getFullName());
+});
 
 console.groupEnd();
 // ---------------------------
