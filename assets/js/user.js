@@ -30,7 +30,7 @@ console.table(users);
 // ---------------------------
 console.group('Не підписані користувачі');
 
-const notSubscribed = users.filter((u) => u.isSubscribed !== true);
+const notSubscribed = users.filter((u) => !u.isSubscribed);
 console.table(notSubscribed);
 
 console.groupEnd();
@@ -83,7 +83,7 @@ console.groupEnd();
 console.group('Який відсоток користувачів підписані (subscribed): ');
 
 const total = users.length;
-const subscribedUsers = users.filter((u) => u.isSubscribed === true).length;
+const subscribedUsers = users.filter((u) => u.isSubscribed).length;
 const percentage = (subscribedUsers / total) * 100;
 console.log(
   `Який відсоток користувачів підписані (subscribed): ${percentage}%`
@@ -116,5 +116,5 @@ console.log(
 
 console.log(
   'Перевірити, чи всі користувачі підписані',
-  users.every((u) => u.isSubscribed === true)
+  users.every((u) => u.isSubscribed)
 );
