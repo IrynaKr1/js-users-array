@@ -83,7 +83,7 @@ console.groupEnd();
 console.group('Який відсоток користувачів підписані (subscribed): ');
 
 const total = users.length;
-const subscribedUsers = users.filter((u) => u.isSubscribed).length;
+const subscribedUsersCount = users.filter((u) => u.isSubscribed).length;
 const percentage = (subscribedUsers / total) * 100;
 console.log(
   `Який відсоток користувачів підписані (subscribed): ${percentage}%`
